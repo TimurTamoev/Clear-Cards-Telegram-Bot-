@@ -105,14 +105,11 @@ The bot automatically creates and manages SQLite databases in the `databases/` d
 The project includes comprehensive testing which ensures that everything works correctly:
 
 ```bash
-# Run all tests
 poetry run pytest
 
-# Run specific test categories
 poetry run pytest tests/unit/
 poetry run pytest tests/integration/
 
-# Run with coverage
 poetry run pytest --cov=src
 ```
 
