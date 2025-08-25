@@ -37,7 +37,6 @@ A powerful asynchronous telegram bot for creating and managing flashcards to enh
 3. **Activate your virtual environment**
    ```bash
    cp .env.example .env
-   # Edit .env and add your Telegram bot token
    echo "api=YOUR_BOT_TOKEN_HERE" > .env
    ```
 
