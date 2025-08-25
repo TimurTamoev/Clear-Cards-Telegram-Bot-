@@ -25,7 +25,7 @@ A powerful asynchronous telegram bot for creating and managing flashcards to enh
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url> ADD HERE SHIT
+   git clone <your-repo-url> 
    cd clear-cards-bot
    ```
 
