@@ -1,0 +1,30 @@
+[project]
+name = "bot"
+version = "0.1.0"
+description = "Flash cards telegram bot for learning which is created in orded to simplify studying process by enhancing memorasing"
+authors = [
+    {name = "Timur Tamoev"}
+]
+readme = "README.md"
+requires-python = ">= 3.11.0,<4.0.0"
+dependencies = [
+    "aiogram (>=3.21.0,<4.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)",
+    "aiosqlite (>=0.21.0,<0.22.0)",
+    "black (>=25.1.0,<26.0.0)",
+    "pytest-asyncio (>=1.1.0,<2.0.0)",
+    "pytest (>=8.4.1,<9.0.0)",
+    "pytest-mock (>=3.14.1,<4.0.0)",
+]
+
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+pytest-asyncio = "^1.1.0"
+aiogram = "^3.21.0"
+
