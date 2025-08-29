@@ -32,6 +32,7 @@ A powerful asynchronous telegram bot for creating and managing flashcards to enh
 2. **Install poetry dependencies**
    ```bash
    poetry install
+   poetry lock 
    ```
 
 3. **Activate your virtual environment**
