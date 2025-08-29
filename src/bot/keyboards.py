@@ -34,7 +34,7 @@ async def generate_inline_decks(id: str) -> InlineKeyboardMarkup:
     loaded_decks = await get_decks(id)
     for deck in loaded_decks:
         deck[1] = deck[1].replace(deck[0][:8], "t")
-        deck[2] = deck[2].replace(deck[0][:8], "t")
+        deck[2] = str(deck[2]).replace(deck[0][:8], "t")
         if len(deck[0]) > 8:
             inline_template.button(
                 text=f"{deck[0][:8]}...", callback_data=f"call_deck_{deck[1]}_{deck[2]}"

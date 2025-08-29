@@ -29,7 +29,7 @@ async def test_show_decks(monkeypatch, mocker):
 
     state_mock = mocker.AsyncMock()
     state_mock.update_data = mocker.AsyncMock()
-    state_mock.get_data = mocker.AsyncMock(return_value={"deck_name": deck_name})
+    state_mock.get_data = mocker.AsyncMock(return_value={"deck_name": str(deck_name)})
     state_mock.clear = mocker.AsyncMock()
 
     await create_deck.insert_deck_name(message_mock, state_mock, bot_mock)
