@@ -16,9 +16,9 @@ A powerful asynchronous telegram bot for creating and managing flashcards to enh
 ### What is needed?
 
 - Python 3.11 or higher  
-- <img src="docs/images/img_1.png" alt="Application Screenshot" width="300" />
+- <img src="data/images/img_1.png" alt="Application Screenshot" width="300" />
 - Telegram Bot Token (get it from [@BotFather](https://t.me/botfather))
-- <img src="docs/images/img_2.png" alt="Application Screenshot" width="200" />
+- <img src="data/images/img_2.png" alt="Application Screenshot" width="200" />
 - Poetry (for dependency management)
 
 ### How to install? 
@@ -52,7 +52,7 @@ A powerful asynchronous telegram bot for creating and managing flashcards to enh
 
 1. Open Telegram, find your bot and begin a conversation.
 2. Type `/start` to execute the bot and get your main menu.
-- <img src="docs/images/img_3.png" alt="Application Screenshot" width="250" />
+- <img src="data/images/img_3.png" alt="Application Screenshot" width="250" />
 3. Use main menu for native navigation.
 
 ### What is this bot capable of?
