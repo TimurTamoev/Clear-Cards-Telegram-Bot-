@@ -144,6 +144,7 @@ async def show_next(callback: CallbackQuery, bot: Bot, state: FSMContext):
             ]
         ]
     )
+    #print(current_card_index, cards[current_card_index][3], deck_id[:-2])
     msg = await callback.message.answer(text=front, reply_markup=rating)
     manager.add_direct_msg(callback.message.chat.id, msg)
     manager.add_message(callback.message.chat.id, msg.message_id)
@@ -154,7 +155,8 @@ async def show_next(callback: CallbackQuery, bot: Bot, state: FSMContext):
 async def insert_rating(callback: CallbackQuery, state: FSMContext, bot: Bot):
     rate = callback.data.split("_")[1]
     rowid = callback.data.split("_")[3]
-    memory = await get_memory(callback.data.replace(f"rate_{rate}_", "")[4:], rowid)
+    #print(rowid, callback.data.replace(f"rate_{rate}_", "")[4:-2] + "_" + rowid)
+    memory = await get_memory(callback.data.replace(f"rate_{rate}_", "")[4:-2] + '_' + rowid, 0)
     if rate == "easy":
         await change_memory(
             callback.data.replace(f"rate_{rate}_", "")[4:],
