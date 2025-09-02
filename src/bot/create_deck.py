@@ -36,19 +36,7 @@ async def insert_deck_name(message: Message, state: FSMContext, bot: Bot):
     await manager.delete_previous(bot, message.chat.id)
     await manager.delete_user_msg(message)
     deck = await state.get_data()
-    #    try:
     await create_deck(message.chat.id, deck["deck_name"].replace(" ", "␟").replace("_", "ø"))
-    #    except ValueError:
-    #        various_msg = await message.answer(
-    #            "❌ **Invalid deck name!**\n\nYour deck name contains forbidden characters. Please use only letters, numbers, spaces, and basic punctuation.",
-    #            reply_markup=show_cards_kb,
-    #        )
-    #    except Exception:
-    #        various_msg = await message.answer(
-    #            "❌ **Deck name too long!**\n\nPlease choose a shorter name for your deck (maximum 50 characters).",
-    #            reply_markup=show_cards_kb,
-    #        )
-    #    else:
     various_msg = await message.answer(
         "✅ **Deck created successfully!**\n\nYour new flashcard deck is ready. You can now start adding cards to it!",
         reply_markup=show_cards_kb,

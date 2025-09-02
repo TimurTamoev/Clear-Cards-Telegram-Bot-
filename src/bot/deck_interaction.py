@@ -51,6 +51,7 @@ async def click_on_deck(callback: CallbackQuery, bot: Bot):
             ],  # this callback is already handled
         ]
     )
+    print(callback.data)
     deckanme = await get_deck_name_txt_from_its_rowid(int(callback.data.split("_")[4]))
     #deck_inline_msg = await callback.message.answer(
     #    f"{callback.data.split("_")[2].replace("␟", " ")}:", reply_markup=deck_inline
