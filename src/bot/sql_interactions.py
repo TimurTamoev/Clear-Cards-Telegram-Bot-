@@ -146,7 +146,7 @@ async def delete_card(relevant_info: str) -> None:
         )
         deck_row = await deck_row.fetchone()
         await db.execute(
-            "DELETE FROM 'cards' WHERE deck_and_user = ? AND rowid_index = ?",
+            "DELETE FROM 'cards' WHERE deck_and_user = ? AND rowid = ?",
             (f"{deck_row[0]}_{user_sql_row[0]}", card_rowid),
         )
         await db.commit()
